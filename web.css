@@ -1,0 +1,283 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   
+
+
+}
+body
+{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+
+  
+
+}
+header
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 100px;
+  background:rgba(0,0,0,0.5);
+  width: 100%;
+  box-sizing: border-box;
+}
+header .logo
+{
+  color: #fff;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  float: left;
+  font-weight: bold;
+
+}
+header nav
+{
+  float: right;
+  position: fixed;
+ 
+
+}
+header nav ul
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: fixed;
+}
+
+header nav ul li
+{
+ list-style: none;
+
+}
+header nav ul li a{
+
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  
+}
+header nav ul li a:hover,
+header nav ul li a.active
+{
+  color: #fff;
+  background:#2196f3;
+}
+.menu-toggle{
+  color: #fff;
+  float: right;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+.banner{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #00BFFF;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+.banner #text{
+  position: relative;
+  font-size: 12em;
+  color: red;
+}
+.banner .clouds{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+.banner .clouds img{
+  position: absolute;
+  bottom: 0;
+  max-width: 90%;
+  animation: animate calc(3s * var(--i)) linear infinite;
+}
+@keyframes animate
+ {
+  0%
+  {
+    opacity: 0;
+    transform: scale(1);
+  }
+  25%,75%
+  {
+    opacity: 1;
+  }
+  100%
+  {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+section{
+  position: relative;
+  padding: 75px 100px;
+}
+section h2{
+  position: relative;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+.image1{
+  
+
+ 
+  float: right;
+  background-repeat: no-repeat;
+
+}
+.text1{
+  float: left;
+  margin-top: 185px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.text1 h1{
+  
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow:rgba(0,0,0.5,0.5);
+  animation: swing ease-in-out 5s infinite; 
+}
+.text1 h3{
+  font-size: 2em;
+  margin-bottom: 20px;
+  animation: fadeup 5s forwards;
+}
+.clock{
+  
+  float: right;
+}
+.img1{
+  background:url(white.jpg);
+}
+.astrik{
+  
+  text-align: center;
+}
+.image2{
+     float: left;
+     background-repeat: no-repeat;
+}
+.about1{
+  float: right;
+   
+  margin-top: 185px;
+  text-transform: uppercase;
+  text-align: center;
+}
+/*animation*/
+@keyframes swing { 
+   20% { transform: rotate(15deg); } 
+   40% { transform: rotate(-10deg); } 
+   60% { transform: rotate(5deg); } 
+   80% { transform: rotate(-5deg); } 
+   100% { transform: rotate(5deg); } 
+}
+@keyframes fadeUp {
+  0%{
+    transform: translateY(4rem);
+
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale {
+  0%{
+    transform: scale(2);
+
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes grow {
+  0%{
+    width:0;
+
+
+  }
+  100%{
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0);
+
+
+  }
+  100%{
+    opacity: 1;
+    transform: rotate(-360deg);
+  }
+}
+
+
+/*media*/
+@media (max-width: 991px){
+  header{
+    padding: 0 20px;
+
+  }
+  .menu-toggle{
+    display: block;
+  }
+  header nav{
+  
+   position: absolute;
+   width: 100%;
+   height: calc(100vh - 50px);
+   background-color:#333;
+   top: 50px ;
+   left: -100%;
+   transition: 0.5s;
+  }
+   header nav.active{
+    left: 0;
+   }
+    header nav ul{
+      display:block;
+      background-color: #333;
+      text-align: center;
+    }
+     header nav ul li a{
+      border-bottom: 2px solid rgba(0,0,0,.2)
+     }
+}
+.wave{
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
